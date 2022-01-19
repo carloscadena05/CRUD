@@ -26,8 +26,8 @@
           <td class="px-2 py-4 font-extralight"> {{dato.texto}} </td>
           <td class="px-2 py-4 font-extralight"> {{dato.fecha}} </td>
           <td class="px-2 py-4 font-extralight space-x-4">
-            <a routerLink="/editar/{{dato.id}}" class="rounded-md border border-teal-400 text-teal-400 py-2 px-4">Editar</a>
-            <a (click)="borrarRegistro(dato.id,iControl)" role="button" class="rounded-md border border-teal-400 text-teal-400 py-2 px-4">Borrar</a>
+            <a routerLink="/editar/{{dato.id}}" class="rounded-md border border-teal-400 text-teal-400 py-2 px-4 hover:bg-teal-400/10">Editar</a>
+            <a (click)="borrarRegistro(dato.id,iControl)" role="button" class="rounded-md border border-blue-400 text-blue-400 py-2 px-4 hover:bg-blue-400/10">Borrar</a>
           </td>
         </tr>
       </tbody>
