@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms'
+import { Router } from '@angular/router';
 import { CrudService } from '../servicio/crud.service';
 
 @Component({
@@ -12,7 +13,8 @@ export class Form2Component implements OnInit {
   form: FormGroup;
 
   constructor(public formulario: FormBuilder,
-    private crudService:CrudService) {
+    private crudService:CrudService,
+    private ruteador:Router) {
     this.form = this.formulario.group({
       nombre:[''],
       apellido_p:[''],
@@ -34,5 +36,6 @@ export class Form2Component implements OnInit {
     this.crudService.AgregarDatos(this.form.value).subscribe(resp=>{
       console.log(resp);
     });
+    this.ruteador.navigateByUrl('/listar');
   }
 }
