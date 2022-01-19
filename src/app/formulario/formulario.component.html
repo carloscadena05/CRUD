@@ -1,0 +1,76 @@
+<div class="flex">
+  <div class="container mx-auto text-black">
+    <form action="" method="post" class="max-w-2xl" (ngSubmit)="enviarDatos()" [formGroup]="form">
+      <p class="text-6xl py-8">Agregar</p>
+      <div class="flex flex-row space-x-4">
+        <div class="basis-1/2">
+          <label for="text">Text</label>
+          <input
+            type="text" formControlName="txt"
+            class="rounded-md w-full bg-gray-100 border-transparent focus:border-blue-600 focus:bg-white"/>
+        </div>
+        <div class="basis-1/2">
+          <label for="text">Text</label>
+          <input
+            type="text" formControlName="txt"
+            class="rounded-md w-full bg-gray-100 border-transparent focus:border-blue-600 focus:bg-white"/>
+        </div>
+
+      </div>
+      <div class="w-full grid-cols-2">
+        <div>
+          <label for="email">Email</label>
+          <input
+            type="email" formControlName="email"
+            class="rounded-md w-full bg-gray-100 border-transparent focus:border-blue-600 focus:bg-white"/>
+        </div>
+        <div>
+          <label for="contraseña">Contraseña</label>
+          <input
+            type="password" formControlName="pwd"
+            class="rounded-md w-full bg-gray-100 border-transparent focus:border-blue-600 focus:bg-white"/>
+        </div>
+      </div>
+      <div>
+        <label for="fecha">Fecha</label>
+        <input
+          type="date" formControlName="fecha"
+          class="rounded-md w-full bg-gray-100 border-transparent focus:border-blue-600 focus:bg-white"/>
+      </div>
+      <div>
+        <label for="select">Select</label>
+        <select
+          formControlName="sel"
+          class="rounded-md w-full bg-gray-100 border-transparent focus:border-blue-600 focus:bg-white">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </div>
+      <div>
+        <label for="textarea">Text area</label>
+        <textarea
+          formControlName="txtarea"
+          cols="30"
+          rows="10"
+          class="rounded-md w-full bg-gray-100 border-transparent focus:border-blue-600 focus:bg-white"></textarea>
+      </div>
+      <div class="w-full">
+        <div>
+          <label for="radio">Radio</label>
+          <input
+            type="radio" formControlName="radio" value="radio1"
+            class="rounded-full bg-gray-100 border-transparent focus:border-white focus:bg-white"/>
+          <label for="radio">Radio</label>
+          <input
+            type="radio" formControlName="radio" value="radio2"
+            class="rounded-full bg-gray-100 border-transparent focus:border-white focus:bg-white"/>
+        </div>
+      </div>
+      <div>
+        <button class="bg-blue-600 text-white p-4 rounded-md hover:bg-blue-300 duration-300" type="submit">Agregar</button>
+        <button class="bg-green-600 text-white p-4 rounded-md hover:bg-green-300 duration-300" type="button">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</div>
